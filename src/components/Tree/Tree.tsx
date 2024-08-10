@@ -93,8 +93,6 @@ const Tree: FC = () => {
       await api.endpoints.deleteNode(nodeId);
       await fetchTreeData();
     } catch (err) {
-      console.log("handleDeleteNode", err);
-
       setError((err as Error).message);
     } finally {
       setLoading(false);
